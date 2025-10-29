@@ -32,5 +32,4 @@
     SELECT * FROM clientes;  
     SELECT * FROM proveedores;  
 
-> esta consulta nos devolverá una grilla de resultados con todas las columnas y todos los registros de una tabla especificada
-> 
+> Esta consulta nos devolverá una grilla de resultados con todas las columnas y todos los registros de una tabla especificada
