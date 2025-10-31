@@ -43,11 +43,42 @@
     SELECT producto, precio  
       FROM productos  
       WHERE precio >= 100    
-        AND precio <=750;  
+        AND precio <= 750;  
 
-> Lostado de pilotos nacidos entres los años 1990 y 2000
+> Listado de pilotos nacidos entre los años 1990 y 2000
 
     SELECT piloto, nacimiento
       FROM pilotos
       WHERE nacimiento >= '1990-01-01'
         AND nacimiento <= '2000-12-31';
+
+> uso de BETWEEN
+
+    SELECT producto, precio  
+      FROM productos  
+      WHERE precio BETWEEN 100 AND 750;  
+
+    SELECT piloto, nacimiento
+      FROM pilotos
+      WHERE nacimiento  
+                BETWEEN '1990-01-01' AND '2000-12-31';   
+
+> Obtener listado de proveedores cuya razón social esté entre la 'A' y la 'E'
+
+    SELECT razonSocial, telefono  
+      FROM proveedores  
+      WHERE razonSocial BETWEEN 'a' AND 'f'  
+      ORDER BY razonsocial;  
+
+> Obtener producto, precio de los productos pertenecientes a las marcas 7 (HP) y 12 (Philips)
+
+    SELECT producto, precio, idMarca    
+      FROM productos    
+      WHERE idMarca = 7  
+       OR  idMarca = 12;
+
+> función IN()  
+
+    SELECT producto, precio, idMarca    
+      FROM productos    
+      WHERE idMarca IN(7,12);
